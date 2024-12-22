@@ -1,0 +1,21 @@
+.about {
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.about h1 {
+    font-size: 1.2rem;
+    align-self: center;
+}
+.about p {
+    font-size: 1rem;
+}
+#moveToModules {
+    position: absolute;
+    margin-top: 200px;
+    margin-right: 1100px;
+    background-color: cyan
+}

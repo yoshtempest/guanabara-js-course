@@ -1,0 +1,11 @@
+.modules-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+.modules-container button {
+    background-color: cyan;
+    width: 100px;
+    height: 25px;
+}

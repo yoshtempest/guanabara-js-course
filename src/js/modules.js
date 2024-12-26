@@ -2,6 +2,10 @@ const body = document.body;
 
 const modulesContainer = document.createElement('div');
 modulesContainer.className ='modules-container';
+modulesContainer.style.display = 'flex';
+modulesContainer.style.flexDirection = 'column';
+modulesContainer.style.gap = '20px';
+modulesContainer.style.alignItems = 'start';
 
 const heading = document.createElement('h1');
 heading.textContent = 'Select which module you want to see';

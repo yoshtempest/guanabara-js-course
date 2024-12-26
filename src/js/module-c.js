@@ -1,36 +1,39 @@
 const body = document.body;
 
 const moduleC = document.createElement('div');
-moduleC.className = 'module-c';
+moduleC.id = 'moduleC';
 
 const heading = document.createElement('h1');
 heading.textContent = 'Module C - DOM';
 
-const paragraph = document.createElement('p');
-paragraph.textContent = 'Dom = Document Object Model'
+const meaningOfDom = document.createElement('p');
+meaningOfDom.textContent = 'Dom = Document Object Model'
 
 const buttonWhatIsDom = document.createElement('button');
 buttonWhatIsDom.textContent = 'What is the DOM?';
-buttonWhatIsDom.style.backgroundColor = 'cyan';
-buttonWhatIsDom.style.borderRadius = '50px';
-buttonWhatIsDom.style.cursor = 'pointer';
 buttonWhatIsDom.onclick = () =>
 {
     alert('Dom is basically a set of objects inside your browser that will give access to the internal components of your website.');
 }
+
+// DOM Tree
+const domTree = document.createElement('div');
+domTree.className = 'domTree';
 
 const domTreeHeading = document.createElement('h2');
 domTreeHeading.textContent = 'DOM Tree';
 
 const buttonDomTree = document.createElement('button');
 buttonDomTree.textContent = 'What do you mean by DOM tree?';
-buttonDomTree.style.backgroundColor = 'cyan';
-buttonDomTree.style.borderRadius = '50px';
-buttonDomTree.style.cursor = 'pointer';
 buttonDomTree.onclick = () =>
 {
     alert('The DOM tree basically starts at the root(window), with everything JavaScript inside it.')
 }
+
+// Element Selectors
+const elementSelectors = document.createElement('div');
+elementSelectors.className = 'elementSelectors';
+
 const elementSelectorsHeading = document.createElement('h2')
 elementSelectorsHeading.textContent = 'Element Selectors';
 
@@ -52,10 +55,11 @@ const modalImage = document.createElement('img')
 modalImage.src = '../images/ways-to-select.png';
 
 const closeModal = document.createElement('button');
+closeModal.id = 'closeModal';
 closeModal.textContent = 'Close';
 closeModal.style.position = 'relative';
-closeModal.style.right = '40px';
-closeModal.style.top = '0px';
+closeModal.style.right = '-300px';
+closeModal.style.top = '-220px';
 closeModal.style.width = '40px';
 closeModal.style.height = '25px';
 closeModal.style.backgroundColor = 'red';
@@ -65,9 +69,6 @@ closeModal.style.borderColor = 'red';
 
 const buttonShowWays = document.createElement('button');
 buttonShowWays.textContent = 'Show me';
-buttonShowWays.style.backgroundColor = 'cyan';
-buttonShowWays.style.borderRadius = '50px';
-buttonShowWays.style.cursor = 'pointer';
 
 buttonShowWays.onclick = () =>
 {
@@ -85,19 +86,41 @@ overlay.onclick = () =>
     modal.style.display = 'none';
 };
 
+// DOM Events
+const domEvents = document.createElement('div');
+domEvents.className = 'domEvents';
+
+const domEventsHeading = document.createElement('h2');
+domEventsHeading.textContent = 'DOM Events';
+
+const domEventsButton = document.createElement('button');
+domEventsButton.textContent = 'What are DOM events?';
+domEventsButton.onclick = () =>
+{
+    alert('DOM events are all user interactions that happen on the webpage. Some examples include clicking, scrolling, or typing.');
+}
+
+domTree.appendChild(domTreeHeading);
+domTree.appendChild(buttonDomTree);
+
 modal.appendChild(modalImage);
 modal.appendChild(closeModal);
 
-moduleC.appendChild(heading);
-moduleC.appendChild(paragraph);
-moduleC.appendChild(buttonWhatIsDom);
-moduleC.appendChild(domTreeHeading);
-moduleC.appendChild(buttonDomTree);
-moduleC.appendChild(elementSelectorsHeading);
-moduleC.appendChild(paragraphAboutWays);
-moduleC.appendChild(buttonShowWays);
-moduleC.appendChild(overlay);
-moduleC.appendChild(modal);
+elementSelectors.appendChild(elementSelectorsHeading);
+elementSelectors.appendChild(paragraphAboutWays);
+elementSelectors.appendChild(buttonShowWays);
+elementSelectors.appendChild(overlay);
+elementSelectors.appendChild(modal);
 
+domEvents.appendChild(domEventsHeading);
+domEvents.appendChild(domEventsButton);
+
+moduleC.appendChild(heading);
+moduleC.appendChild(meaningOfDom);
+moduleC.appendChild(buttonWhatIsDom);
+
+moduleC.appendChild(domTree);
+moduleC.appendChild(elementSelectors);
+moduleC.appendChild(domEvents);
 
 body.appendChild(moduleC);
